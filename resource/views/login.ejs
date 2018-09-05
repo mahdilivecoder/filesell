@@ -1,0 +1,40 @@
+<div class='clearfix' style="margin-top:200px;right:500px; position: relative;">
+    <h2>ورود اعضا</h2>
+</div>
+
+<div class="border-dark border-primary float-none position-relative" style="width: 400px;
+ height:450px; left:340px; top:50px; background-color:rgba(172,186,211,0.2);box-shadow:1px 1px 1px 1px #bee5eb;">
+<span dir="rtl" style="float:right">
+    مشخصات کاربری خود را جهت ورود به سایت
+    سل فایل&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;وارد کنید.
+</span>
+    <i style="clear: both; position: relative; right: 150px;"><img src="./../../Images/login.png" alt="سل فایل" width="100px" height="100px"/> </i><br/>
+    <!-- login form-->
+    <form action="/auth" method="post" class="form-group" dir="rtl" id="form-submit">
+        <label style="margin-right:50px;">ایمیل:</label><input type="text" id="username" style="margin-right:15px;" class="input-group-sm" name="username" placeholder="نام کاربری"> <br/><br/>
+        <label style="margin-right:20px;">کلمه عبور:</label><input id="password" type="password" style="margin-right:15px;" class="input-group-sm" name="password" placeholder="رمز عبور"><br/><br/>
+        <button type="submit" name="senddata" class="btn btn-success btn-lg btn-block">ورود</button><br/>
+        <center>
+        <a class="alert-link" href="auth/register" style="align-content: center; color: rgba(219,43,20,0.85)">عضویت در سایت</a><br/>
+            <a class="alert-link" href="auth/lostpassword" style="align-content: center; color: rgba(219,43,20,0.85)">کلمه عبور خود را فراموش کرده اید؟</a>
+            <br/><br/>
+            <p id="error-send" class="alert-danger"></p>
+            </center>
+
+    </form>
+    <script>
+        document.getElementById('form-submit').addEventListener('submit',function (event) {
+            var formarr={username:document.getElementById('username').value,password:document.getElementById('password').value};
+            if(formarr['username'].length>=3 && formarr['password'].length>=5) {
+                document.getElementById('form-submit').submit();
+                console.log(formarr['username'], formarr['password']);
+
+           }else{
+                event.preventDefault();
+                document.getElementById('error-send').innerHTML="لطفاٌ ورودی ها را بیشتر از 5 کاراکتر پر کنید.!";
+            }
+        })
+
+
+    </script>
+</div>
