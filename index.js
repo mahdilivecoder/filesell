@@ -23,7 +23,6 @@ module.exports = class Application {
         })
     }
     setConfig() {
-        require('./passport/passport');
         require('./passport/passport-local');
         app.use(express.static(config.layout.public_dir));
         app.set('view engine', config.layout.view_engine);
@@ -39,7 +38,9 @@ module.exports = class Application {
         app.use(session({ ...config.session }));
         app.use(cookieParser(process.env.COOKIESECRETKEY));
         app.use(flash());
-
+        //passport.js
+        app.use(passport.initialize());
+        app.use(passport.session());
     }
 
         setMongoConnection() {

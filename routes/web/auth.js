@@ -3,10 +3,14 @@ const router = express.Router();
 const passport = require('passport');
 
 const loginController = require('./../../http/controllers/auth/loginController');
-//posting form login and process
-router.post('/', loginController.processLoginform);
+const registerController = require('./../../http/controllers/auth/registerController');
 //show login form
-router.get('/login',loginController.showLoginform);
+router.get('/login', loginController.showLoginform);
+router.post('/login', loginController.processLoginform);
+
+router.get('/register', registerController.showRegisterform);
+router.post('/register', registerController.processRegisterform);
+
 
 module.exports = router;
 
