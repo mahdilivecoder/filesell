@@ -1,0 +1,65 @@
+<div class='clearfix' style="margin-top:200px;right:500px; position: relative;">
+    <h2>ثبت نام</h2>
+</div><br>
+<div class="align-text-top" dir="rtl" style="font-size:20px; margin-right:200px;">
+    <span> لطفا فرم ثبت نام را صحیح و کامل پر نمائید درج تمام موارد ضروری می باشد.</span><br>
+    <span> آدرس ایمیل صحیح جهت دریافت لینک فعالسازی حساب کاربری ضروری است</span><br>
+    <span> ثبت نام در سایت Sellfile.ir </span>
+</div><br><br>
+
+<form style="color:rgba(117,0,255,0.04);
+ background-color: #666666; width: 430px;height:700px;
+  float: right;" method="post" action="/auth/register" >
+<img src="./../../Images/signup.jpg" alt="ثبت نام " class="figure-img float-left" style="position: relative;right:600px;" />
+    <table class=" text-white">
+        <tbody class="position-absolute align-text-top" dir="rtl" style="right:410px; top:430px;">
+            <tr class="form-group">
+                <td><label>نام و نام خانوادگی:</label></td>
+                <td><input type="text" name="username"/> <span id="error_span" class="alert-danger">*</span> </td>
+
+            </tr><br>
+            <tr class="form-group">
+                <td><label>کد ملی:</label></td>
+                <td><input type="text" name="codemeli" /> <span id="error_span" class="alert-danger">*</span></td>
+
+            </tr><br>
+            <tr class="form-group">
+                <td><label>تلفن همراه:</label></td>
+                <td><input type="text" name="phonenumber" />  <span id="error_span" class="alert-danger">*</span></td>
+
+            </tr><br>
+            <tr class="form-group">
+                <td><label>ایمیل:</label></td>
+                <td><input type="email" name="email" /> <span id="error_span" class="alert-danger">*</span></td>
+
+            </tr><br>
+            <tr class="form-group">
+                <td><label>کلمه عبور:</label></td>
+                <td><input type="password" name="password" maxlength="50" /> <span id="error_span" class="alert-danger">*</span></td>
+
+            </tr><br>
+            <tr class="form-group">
+                <td><label>کلمه عبور:</label></td>
+                <td><input type="password" name="password" maxlength="50"  />  <span id="error_span" class="alert-danger">*</span></td>
+            </tr><br>
+        <tr>
+            <td colspan="2"><textarea class="text-dark" style="text-align:right;width:100%;height:150px;" name="term">شما با تایید و ارسال این فرم به سایت توافق نامه زیر را تایید کرده اید:
+
+1- تمامی مسئولیت شرعی ، قانونی ، مدنی فروشگاه ایجاد شده را می پذیرید و متعهد به رعایت کامل قوانین جمهوری اسلامی هستید
+2- قوانین سایت درخصوص نحوه و شرایط استفاده ، شرایط فروش فایل ، مصادیق فروش مجرمانه ، حریم خصوصی اعضا ، رفع مسئولیت را خوانده و کاملا آگاه هستید و بصورت کامل متعهد به اجرای آنها خواهید بود و درصورت وقوع جرم مسئولیت شرعی ، قانونی ، مدنی به عهده شما به عنوان مدیر فروشگاه خواهد بود
+3- با ثبت نام در فایل سل پذیرش این توافق نامه را اعلام می کنید.</textarea>   <br>
+                 <input id="agy" type="radio" name="agree" class="form-group custom-radio"/> قوانین فوق را قبول دارم.<br>
+                    <input id="agn" type="radio" name="agree" class="form-group custom-radio" checked=""/>قبول ندارم.<br>
+            <br></td>
+        </tr><br>
+
+        </tbody>
+        <td>
+            <tr class="form-group position-relative" style="top: 300px; left:100px;">
+                <td><%-recaptcha%></td>
+            </tr>
+        </td><br>
+        <input type="submit" name="send-data" class="btn position-relative" value="ثبت نام" style="top: 450px; right: 150px;"/>
+    </table>
+
+</form>

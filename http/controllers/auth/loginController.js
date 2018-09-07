@@ -2,7 +2,7 @@
 
 
 class loginController extends controller {
-    processLoginform(req, res) {
+    processLoginForm(req, res) {
         //vorod be system
         let userandpass=[req.body.username,req.body.password];
         userandpass.forEach(data=>{
