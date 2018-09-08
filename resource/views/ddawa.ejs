@@ -60,6 +60,20 @@
             </tr>
         </td><br>
         <input type="submit" name="send-data" class="btn position-relative" value="ثبت نام" style="top: 450px; right: 150px;"/>
+
+            <% if(errors.length>0){ %>
+        <%
+            errors.forEach(error=>{
+
+
+        %>
+        <span class="alert alert-danger " style="top: 550px; right: 150px;">
+
+            <%=error%>
+<!-- edit this ui error but backend is working-->
+
+        </span>
+        <% })}%>
     </table>
 
 </form>
